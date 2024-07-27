@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav .navbar {
+    display: flex;
+    padding: 17px 0px;
+    justify-content: space-around;
+    color: black;
+}
+
+nav .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+nav ul li a:hover {
+    color: rgb(90, 90, 90);
+}
+
+nav ul li.closeNav {
+    display: none;
+}
+
+nav .navbar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar .logo h4 {
+    margin-left: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+}
+
+nav .navbar #menuToogle {
+    display: none;
+    align-items: center;
+}
+
+
+/* responsive  */
+
+@media (max-width: 992px) {
+    nav .navbar ul {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .navbar ul {
+        width: 35%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav .navbar {
+        transition: ease 1s;
+    }
+    nav .navbar ul {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        transform: translateX(100%);
+        flex-direction: column;
+        height: 100vh;
+        width: 80%;
+        justify-content: left;
+        align-items: flex-start;
+        background-color: #ee141f;
+        transition: ease 0.6s;
+    }
+    nav .navbar ul.muncul {
+        transform: translateX(0);
+    }
+    nav .navbar ul li {
+        margin: 20px 50px;
+    }
+    nav ul li a {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+    nav .navbar #menuToogle {
+        display: flex;
+        cursor: pointer;
+    }
+    nav ul li.closeNav {
+        display: flex;
+    }
+}
